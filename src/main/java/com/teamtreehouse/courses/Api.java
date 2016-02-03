@@ -12,7 +12,7 @@ import static spark.Spark.post;
 
 public class Api {
     public static void main(String[] args) {
-        Sql2o sql2o = new Sql2o("jdbc:h2:~/reviews.db;INIT=RUNSCRIPT from 'classpath:db/init.sql");
+        Sql2o sql2o = new Sql2o("jdbc:h2:~/reviews.db;INIT=RUNSCRIPT from 'classpath:db/init.sql'", "", "");
         CourseDao courseDao = new Sql2oCourseDao(sql2o);
         Gson gson = new Gson();
 
